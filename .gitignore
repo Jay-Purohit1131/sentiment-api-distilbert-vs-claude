@@ -1,0 +1,46 @@
+# ── Secrets (NEVER commit) ──────────────────────────────────────────────────
+.env
+*.env
+secrets.*
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ── Virtual environments ────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Testing / linting caches ────────────────────────────────────────────────
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── Notebooks ───────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Data (keep the folder, ignore large files) ──────────────────────────────
+data/*
+!data/.gitkeep
+
+# ── Model artifacts (too large / regenerable; host on HF Hub instead) ────────
+*.bin
+*.safetensors
+*.onnx
+*.pt
+*.ckpt
+models/
+checkpoints/
+results/checkpoint-*/
+
+# ── OS / editor ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

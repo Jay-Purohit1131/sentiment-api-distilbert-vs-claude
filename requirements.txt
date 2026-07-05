@@ -1,0 +1,22 @@
+# ── Core dependencies (Day 1) ───────────────────────────────────────────────
+# Pinned for reproducibility. Versions current as of project start (Jul 2026).
+transformers==5.13.0
+datasets==5.0.0
+scikit-learn==1.9.0
+fastapi==0.139.0
+pydantic==2.13.4
+anthropic==0.116.0
+pytest==9.1.1
+
+# ── Added in later phases (uncomment when you reach them) ────────────────────
+# Phase 2 — fine-tuning DistilBERT (note: Colab already has these preinstalled,
+# so you only need them locally when you run inference in the API):
+# torch==2.12.1
+# accelerate==1.14.0
+#
+# Phase 3 — serving + testing the FastAPI app:
+# uvicorn==0.50.0
+# httpx==0.28.1        # required by FastAPI's TestClient
+#
+# Phase 6 — linting in CI:
+# ruff==0.15.20
