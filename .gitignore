@@ -44,3 +44,4 @@ results/checkpoint-*/
 Thumbs.db
 .vscode/
 .idea/
+distilbert-imdb/

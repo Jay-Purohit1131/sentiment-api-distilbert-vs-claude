@@ -46,8 +46,8 @@ _Filled in as the project progresses._
 
 | Model | Accuracy | F1 | Latency (p50) | Cost / 1k | Maintenance |
 |-------|----------|----|---------------|-----------|-------------|
-| TF-IDF + LogReg (baseline) | — | — | — | — | — |
-| Fine-tuned DistilBERT | — | — | — | — | — |
+| TF-IDF + LogReg (baseline) | 0.893 | 0.893 | — | — | — |
+| Fine-tuned DistilBERT | 0.937 | 0.937 | — | — | — |
 | Claude (Anthropic API) | — | — | — | — | — |
 
 **Verdict:** _when-each-wins analysis goes here (Phase 5)._
