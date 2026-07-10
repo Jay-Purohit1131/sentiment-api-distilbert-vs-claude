@@ -92,6 +92,6 @@ cp .env.example .env             # then edit .env and add your key
 `transformers` · `datasets` · `scikit-learn` · `FastAPI` · `pydantic` ·
 `anthropic` · `Docker` · `GitHub Actions` · `pytest`
 
-## License
 
-_TODO: add a license (MIT is a common choice for portfolio projects)._
+## License
+Released under the [MIT License](LICENSE).
