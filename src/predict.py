@@ -8,7 +8,7 @@ across requests rather than reloading per call.
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-MODEL_DIR = "./distilbert-imdb"   # relative to repo root; run from there
+MODEL_DIR = "INEED2PPP/sentiment-distilbert-imdb"
 
 # Loaded once at import — not per prediction.
 tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR)

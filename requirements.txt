@@ -7,24 +7,20 @@ fastapi==0.139.0
 pydantic==2.13.4
 anthropic==0.116.0
 pytest==9.1.1
- 
+
 # Analysis & plotting (Phase 0-1 EDA, Phase 5 gold-set handling)
 pandas==3.0.3
 matplotlib==3.11.0
 seaborn==0.13.2
- 
-# ── Added in later phases (uncomment when you reach them) ────────────────────
-# Phase 2 — fine-tuning DistilBERT (note: Colab already has these preinstalled,
-# so you only need them locally when you run inference in the API):
- torch==2.12.1
- accelerate==1.14.0
-#
-# Phase 3 — serving + testing the FastAPI app:
- uvicorn==0.50.0
- httpx==0.28.1        # required by FastAPI's TestClient
- fastapi
 
-#
+# ── Added in later phases 
+# Phase 2 — fine-tuning DistilBERT 
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.12.1
+accelerate==1.14.0
+
+# Phase 3 — serving + testing the FastAPI app:
+uvicorn==0.50.0
+httpx==0.28.1        # required by FastAPI's TestClient
 # Phase 6 — linting in CI:
-# ruff==0.15.20
- 
+ruff==0.15.20

@@ -9,7 +9,7 @@ from src.predict import predict          # the function, from your module
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-MODEL_ID = "./distilbert-imdb"
+MODEL_ID = "INEED2PPP/sentiment-distilbert-imdb"
 # no pipeline, no classifier — predict.py already loads the model once
 
 app = FastAPI(

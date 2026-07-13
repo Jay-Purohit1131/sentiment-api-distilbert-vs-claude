@@ -29,7 +29,8 @@ a clear "when each wins" verdict.
 1. **Cheap baseline first** — TF-IDF + Logistic Regression. Establishes the floor before
    reaching for anything heavier.
 2. **Fine-tuned DistilBERT** — trained on the IMDB reviews dataset via the Hugging Face
-   `Trainer`, reported as an F1 lift over the baseline.
+   `Trainer`, reported as an F1 lift over the baseline. Model weights hosted on the
+   [Hugging Face Hub](https://huggingface.co/INEED2PPP/sentiment-distilbert-imdb).
 3. **Served in production** — FastAPI with `POST /predict` (Pydantic-validated),
    `/health`, and auto-generated `/docs`, containerised with Docker.
 4. **The showdown** — a reproducible eval harness runs both DistilBERT and Claude against
@@ -59,6 +60,8 @@ _Endpoints documented here once built (Phase 3)._ FastAPI auto-serves interactiv
 
 ## Setup
 
+### Option A: Local virtual environment
+
 ```bash
 # 1. Clone
 git clone https://github.com/<your-username>/sentiment-api-distilbert-vs-claude.git
@@ -73,12 +76,36 @@ pip install -r requirements.txt
 
 # 4. Set your Anthropic API key (needed for the Claude comparison, Phase 5)
 cp .env.example .env             # then edit .env and add your key
+
+# 5. Run the API
+uvicorn src.app:app --host 0.0.0.0 --port 8000
 ```
+
+### Option B: Docker
+
+```bash
+# Build the image
+docker build -t sentiment-api .
+
+# Run it (binds to $PORT, defaults to 8000)
+docker run -p 8000:8000 -e PORT=8000 sentiment-api
+
+# Test it
+curl http://localhost:8000/health
+```
+
+Model weights are pulled automatically from the Hugging Face Hub at container
+startup — no local model files are baked into the image.
+
+Once running (either option), visit `http://localhost:8000/docs` for interactive
+API docs.
 
 ## Project structure
 
 ```
 .
+├── Dockerfile
+├── .dockerignore
 ├── src/          # baseline, model, and FastAPI app code
 ├── tests/        # pytest suite (runs in CI)
 ├── notebooks/    # EDA and fine-tuning experiments
