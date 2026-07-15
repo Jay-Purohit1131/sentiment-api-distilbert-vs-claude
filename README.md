@@ -12,6 +12,9 @@ between the fine-tuned model and a frontier LLM (Claude) on the same task.
 Try it: [Sentiment Analysis Demo](https://huggingface.co/spaces/INEED2PPP/sentiment-demo)
 _(Free ZeroGPU tier — the Space sleeps when idle; the first request may take a few seconds to wake and allocate a GPU.)_
 
+<img width="1294" height="403" alt="Screenshot 2026-07-15 at 4 25 53 PM" src="https://github.com/user-attachments/assets/e4c45553-a095-4b9d-9ca9-bb52e50a60b2" />
+
+
  **📊 Fine-tune vs LLM verdict:** _coming in Phase 5_
 
 ---
