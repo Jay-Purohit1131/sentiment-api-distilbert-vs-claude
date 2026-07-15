@@ -8,7 +8,11 @@ A production sentiment-analysis service — a fine-tuned DistilBERT model served
 Dockerised FastAPI on a live public URL — plus a rigorous, reproducible head-to-head
 between the fine-tuned model and a frontier LLM (Claude) on the same task.
 
-**🔗 Live demo:** _coming in Phase 4_ · **📊 Fine-tune vs LLM verdict:** _coming in Phase 5_
+## Live demo
+Try it: [Sentiment Analysis Demo](https://huggingface.co/spaces/INEED2PPP/<your-space-name>)
+_(Free ZeroGPU tier — the Space sleeps when idle; the first request may take a few seconds to wake and allocate a GPU.)_
+
+ **📊 Fine-tune vs LLM verdict:** _coming in Phase 5_
 
 ---
 
