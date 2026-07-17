@@ -25,9 +25,10 @@ htmlcov/
 # ── Notebooks ───────────────────────────────────────────────────────────────
 .ipynb_checkpoints/
 
-# ── Data (keep the folder, ignore large files) ──────────────────────────────
+# ── Data (regenerable datasets ignored; hand-labelled gold set kept) ─────────
 data/*
 !data/.gitkeep
+!data/gold_set.csv
 
 # ── Model artifacts (too large / regenerable; host on HF Hub instead) ────────
 *.bin

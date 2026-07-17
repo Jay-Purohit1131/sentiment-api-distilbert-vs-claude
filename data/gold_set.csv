@@ -1,0 +1,51 @@
+id,text,label,notes
+1,"A stunning, unforgettable film — every scene earns its place and the ending left me speechless.",Positive,
+2,Easily the best movie I've seen all year. Brilliant performances top to bottom.,Positive,
+3,"I laughed, I cried, I immediately wanted to watch it again. A masterpiece.",Positive,
+4,The direction is flawless and the score gave me chills. Absolutely loved it.,Positive,
+5,Gripping from the first minute to the last. I couldn't look away.,Positive,
+6,"A warm, heartfelt story told with real craft. Ten out of ten.",Positive,
+7,Every performance sparkles and the writing is razor sharp. Cinema at its finest.,Positive,
+8,"Beautiful, moving, and endlessly rewatchable. This one stays with you.",Positive,
+9,Perfectly paced and gorgeously shot — a triumph in every department.,Positive,
+10,I went in with low expectations and walked out amazed. Wonderful film.,Positive,
+11,The lead performance alone is worth the price of admission. Superb.,Positive,
+12,"Funny, tender, and genuinely surprising. I can't recommend it enough.",Positive,
+13,An instant classic. I'll be thinking about that final scene for weeks.,Positive,
+14,Complete waste of time. Wooden acting and a plot that goes nowhere.,Negative,
+15,Two hours of my life I'll never get back. Painfully boring throughout.,Negative,
+16,The worst thing I've watched in years. Nothing about it works.,Negative,
+17,"Dull, lifeless, and utterly forgettable. I nearly fell asleep.",Negative,
+18,"Terrible writing, worse acting. Avoid this at all costs.",Negative,
+19,A confusing mess with no redeeming qualities whatsoever.,Negative,
+20,I wanted to walk out halfway through. Just awful.,Negative,
+21,"Cliché after cliché, with zero originality. Deeply disappointing.",Negative,
+22,The pacing is glacial and the dialogue is embarrassing.,Negative,
+23,"A cynical, lazy cash-grab that insults the audience's intelligence.",Negative,
+24,"Flat characters, predictable twists, and a soundtrack that won't stop.",Negative,
+25,I can't remember the last time I was this bored in a cinema.,Negative,
+26,Everything about this film feels cheap and rushed. Skip it.,Negative,
+27,"Oh brilliant, another chosen-one saves the world. How wonderfully original.",Negative,"sarcasm; ""brilliant/original"" are ironic, actual meaning is a tired cliché → negative"
+28,"Sure, a ""masterpiece"" — if you enjoy watching paint dry for two hours.",Negative,"sarcasm; ""masterpiece"" in scare-quotes undercut by ""paint dry"" → negative"
+29,"Wow, groundbreaking stuff: a rom-com where they end up together. Never saw that coming.",Negative,"fake praise (""groundbreaking"") mocking a predictable plot → negative"
+30,"Fantastic, I always wanted to pay fifteen dollars to check my watch every five minutes.",Negative,"sarcasm; ""Fantastic"" ironic, real complaint is boredom (checking watch) → negative"
+31,"Truly inspired filmmaking, assuming your inspiration is other, better films.",Negative,"backhanded; praise conditional on an insult (""other, better films"") → negative"
+32,"The cinematography is breathtaking, but the script is lazy and the pacing drags.",Negative,"mixed; narrow praise (visuals) vs broad complaints (script + pacing); ""but"" pivots to the negative verdict"
+33,Great performances trapped inside a story that never earns its emotional beats.,Negative,mixed; acting praised but the core (story) fails; overall verdict negative
+34,Visually it's a feast; narratively it's an undercooked mess.,Negative,"mixed; visual praise, narrative pan; the story failure dominates → negative"
+35,"The first act is superb, but it squanders every bit of that promise by the end.",Negative,"mixed/twist; strong open ""squandered"" by the end; final verdict negative"
+36,"Wonderful lead, forgettable everything else. Half a good movie.",Positive,"mixed; one good element amid failure; ""half a good movie"" = decent→ positive"
+37,"It's fine. Watchable once, forgotten by morning.",Positive,"faint praise; mild positive (""fine/watchable"") outweighs ""forgotten by morning""; borderline → positive"
+38,"Not the worst way to spend an evening, I suppose.",Positive,"faint praise; grudging positive (""not the worst"") → positive"
+39,"Perfectly adequate. It exists, and that's about all I can say for it.",Positive,"faint praise; ""adequate"" is a technical pass; most debatable of the set → positive"
+40,"Pleasant enough, though I doubt I'll ever think about it again.",Positive,"faint praise; ""pleasant"" carries it despite forgettability → positive"
+41,Not bad at all — honestly far better than the trailer led me to believe.,Positive,"negation; ""not bad"" + ""better than expected"" → positive despite negative words"
+42,This was not the disaster everyone warned me about; I actually enjoyed it.,Positive,"negation; ""not the disaster"" + ""actually enjoyed"" → positive"
+43,"I can't say I hated it, but I can't say I'd watch it twice either.",Negative,"hedged negation; symmetric but ""wouldn't watch twice"" tips it → negative"
+44,Don't let the low rating fool you — there's nothing wrong with this film.,Positive,"negation; ""don't let the low rating fool you / nothing wrong"" → positive"
+45,Meh.,Negative,"terse; ""meh"" is pure indifference, no positive content → negative"
+46,"Fine, I guess.",Positive,"terse; reluctant ""fine, I guess"" has a mild positive core → positive"
+47,Loved every second.,Positive,
+48,For the first hour I was completely hooked. Then it fell apart spectacularly.,Negative,"twist; positive open, but ""fell apart"" is the verdict → negative"
+49,"I was ready to call it the film of the year, right up until that insulting ending.",Negative,"twist; near-praise reversed by ""insulting ending"" → negative"
+50,"Everything was building beautifully, and then they threw it all away in the last ten minutes.",Negative,"twist; ""threw it all away"" overrides the buildup → negative"
