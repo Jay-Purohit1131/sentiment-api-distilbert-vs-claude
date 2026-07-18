@@ -56,10 +56,13 @@ setup-then-twist). Both models were run through one reproducible harness
 | Model | Accuracy | F1 | Latency (p50) | Cost / 1k | Maintenance |
 |-------|----------|----|---------------|-----------|-------------|
 | TF-IDF + LogReg (baseline) | 0.893 | 0.893 | <1 ms | $0 | self-hosted |
-| Fine-tuned DistilBERT | 0.937* | 0.937* | 6 ms | $0 (self-hosted) | you host it |
+| Fine-tuned DistilBERT (PyTorch) | 0.937 | 0.937 | 5.8 ms | $0 | you host it |
+| Fine-tuned DistilBERT (ONNX) | 0.937 | 0.937 | 2.6 ms | $0 | you host it |
 | Claude (Haiku 4.5) | 0.86 | 0.82 | 635 ms | ~$0.13 | zero — API |
 
 Latency from `benchmark.py` (warm-up excluded; 100 runs DistilBERT, 30 Claude):
+
+ONNX Runtime export gives 2.1× the CPU inference throughput at identical accuracy (`benchmark.py`).
 
 - **DistilBERT (local):** p50 6.3 ms, p95 6.7 ms — fast *and* highly consistent
   (p50–p99 spread < 0.5 ms).

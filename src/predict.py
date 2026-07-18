@@ -26,6 +26,7 @@ def predict(text: str) -> dict:
         return_tensors="pt",
         truncation=True,
         max_length=512,
+        return_token_type_ids=False,
     )
     with torch.no_grad():                       # no gradients needed at inference
         logits = model(**inputs).logits

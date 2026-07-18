@@ -24,3 +24,6 @@ uvicorn==0.50.0
 httpx==0.28.1        # required by FastAPI's TestClient
 # Phase 6 — linting in CI:
 ruff==0.15.20
+
+# Phase 7 
+optimum[onnxruntime]
