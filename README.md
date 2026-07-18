@@ -17,6 +17,25 @@ _(Free ZeroGPU tier — the Space sleeps when idle; the first request may take a
 
 ---
 
+## Architecture
+
+```mermaid
+flowchart LR
+    subgraph Serving["Serving (production path)"]
+        U[Review text] --> API["FastAPI<br/>/predict · /health · /docs"]
+        API --> P[predict.py]
+        P --> M[Fine-tuned DistilBERT]
+        M --> RESP["label + confidence"]
+    end
+    subgraph Eval["Evaluation (the comparison)"]
+        G["gold_set.csv<br/>50 hand-labelled"] --> E[run_eval.py]
+        E --> M
+        E --> CL[Claude API]
+        E --> OUT["comparison.json<br/>tradeoff table"]
+    end
+```
+
+---
 ## The problem
 
 A startup receives **10,000 product reviews a day** and wants to classify their
@@ -194,6 +213,26 @@ API docs.
 #   .env                 your secrets (ANTHROPIC_API_KEY)
 #   .venv/               virtual environment
 ```
+
+## Future work
+
+- **Aspect-based sentiment (ABSA).** The evaluation showed both models lose
+  information on *mixed* reviews ("stunning visuals, but a lazy script"), because
+  a single positive/negative label can't represent conflicting opinions. ABSA
+  addresses this directly: classify sentiment *per aspect* (visuals → positive,
+  script → negative) rather than one verdict per review. A trained approach would
+  need aspect-labelled data (e.g. SemEval ABSA) and a token-classification setup;
+  notably, the LLM path extends to this with only a prompt change, while the
+  fine-tuned model would require a new dataset and retraining — itself a
+  continuation of the fine-tune-vs-LLM tradeoff this project measures.
+- **ONNX quantisation** (int8) for further CPU speedup beyond the 2.1× the current
+  ONNX export already gives.
+- **Cheap-LLM third column** (e.g. DeepSeek V4 Flash) to extend the comparison
+  across three cost tiers.
+- **One un-mocked integration test** exercising the real tokenizer→model path,
+  to catch wiring bugs the mocked unit tests can't (e.g. the `token_type_ids`
+  mismatch found during benchmarking).
+
 
 ## Tech
 
