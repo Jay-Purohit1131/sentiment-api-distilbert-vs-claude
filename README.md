@@ -56,8 +56,16 @@ setup-then-twist). Both models were run through one reproducible harness
 | Model | Accuracy | F1 | Latency (p50) | Cost / 1k | Maintenance |
 |-------|----------|----|---------------|-----------|-------------|
 | TF-IDF + LogReg (baseline) | 0.893 | 0.893 | <1 ms | $0 | self-hosted |
-| Fine-tuned DistilBERT | 0.937* | 0.937* | ~6 ms | $0 (self-hosted) | you host, patch, scale it |
-| Claude (Haiku 4.5) | 0.86 | 0.82 | ~800 ms | ~$0.13 | zero — API handles it |
+| Fine-tuned DistilBERT | 0.937* | 0.937* | 6 ms | $0 (self-hosted) | you host it |
+| Claude (Haiku 4.5) | 0.86 | 0.82 | 635 ms | ~$0.13 | zero — API |
+
+Latency from `benchmark.py` (warm-up excluded; 100 runs DistilBERT, 30 Claude):
+
+- **DistilBERT (local):** p50 6.3 ms, p95 6.7 ms — fast *and* highly consistent
+  (p50–p99 spread < 0.5 ms).
+- **Claude (Haiku 4.5):** p50 635 ms, p95 1695 ms — ~100× slower, and the p95 is
+  nearly 3× the median: network round-trips make the tail latency both high and
+  unpredictable.
 
 <sub>*DistilBERT accuracy/F1 differ by test set: 0.937 on the full IMDB test split,
 0.76 on the hard-weighted gold set above. The gold set is intentionally adversarial.</sub>
