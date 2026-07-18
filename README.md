@@ -1,8 +1,7 @@
 # sentiment-api-distilbert-vs-claude
 
-<!-- CI badge goes here once GitHub Actions is set up (Phase 6):
 [![CI](https://github.com/Jay-Purohit1131/sentiment-api-distilbert-vs-claude/actions/workflows/ci.yml/badge.svg)](https://github.com/Jay-Purohit1131/sentiment-api-distilbert-vs-claude/actions/workflows/ci.yml)
--->
+
 
 A production sentiment-analysis service — a fine-tuned DistilBERT model served over a
 FastAPI app (containerised with Docker) — plus an interactive live demo and a rigorous,
