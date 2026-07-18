@@ -22,16 +22,24 @@ CLAUDE_OUTPUT_RATE = 5.00 / 1_000_000
 
 
 def category_for(row_id):
-    """Map gold-set id ranges to hard-case categories. Adjust if your set is ordered differently."""
+    """Map gold-set id ranges to hard-case categories."""
     i = int(row_id)
-    if 1 <= i <= 13:  return "clear_positive"
-    if 14 <= i <= 26: return "clear_negative"
-    if 27 <= i <= 31: return "sarcasm"
-    if 32 <= i <= 36: return "mixed"
-    if 37 <= i <= 40: return "faint_praise"
-    if 41 <= i <= 44: return "negation"
-    if 45 <= i <= 47: return "terse"
-    if 48 <= i <= 50: return "twist"
+    if 1 <= i <= 13:
+        return "clear_positive"
+    if 14 <= i <= 26:
+        return "clear_negative"
+    if 27 <= i <= 31:
+        return "sarcasm"
+    if 32 <= i <= 36:
+        return "mixed"
+    if 37 <= i <= 40:
+        return "faint_praise"
+    if 41 <= i <= 44:
+        return "negation"
+    if 45 <= i <= 47:
+        return "terse"
+    if 48 <= i <= 50:
+        return "twist"
     return "other"
 
 def load_gold(path):

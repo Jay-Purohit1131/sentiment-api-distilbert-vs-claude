@@ -2,7 +2,6 @@
 Claude-based sentiment classifier - the LLM counterpart to predict.py
 """
 
-import os
 from dotenv import load_dotenv
 from anthropic import Anthropic
 

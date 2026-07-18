@@ -29,7 +29,7 @@ def test_classify_negative():
     with patch.object(
         claude_classifier.client.messages, "create",
         return_value= _fake_response("negative"),
-    ) as mock_create:
+    ):
         result = claude_classifier.classify("A terrible film.")
 
     assert result["label"] == "negative"
@@ -39,7 +39,7 @@ def test_classify_handles_messy_output():
     with patch.object(
         claude_classifier.client.messages, "create",
         return_value= _fake_response("Positive.\n"),
-    ) as mock_create:
+    ):
         result = claude_classifier.classify("Great!")
 
     assert result["label"] == "positive"
